@@ -141,9 +141,9 @@ Quá trình này sẽ giúp ta cài đặt Nodejs gồm công cụ NPM và Yarn,
 Cài đặt Ruby Version Management
 ------
 
-Trước hết, ta phải cài đặt phần mềm chứng thực các mã chứng thực và tài liệu mã nguồn bằng GPGTools: [Tải tại đây](https://gpgtools.org/).
+Trước hết và chỉ riêng MacOS, ở một số máy Mac ta phải cài đặt phần mềm xác nhận các mã chứng thực và tài liệu mã nguồn bằng GPGTools [tại đây](https://gpgtools.org/) và quá trình này không bắt buộc nếu máy bạn không có yêu cầu.
 
-Tải và cài đặt nó vào máy tính của bạn. Khi GPGTools cài đặt thành công, tiếp theo chúng ta bật terminal lên và gõ vào 2 lệnh sau để tiến hành cài đặt RVM:
+Tiếp theo chúng ta mở terminal và gõ vào 2 lệnh sau để tiến hành cài đặt RVM:
 
 `gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB`
 
