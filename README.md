@@ -127,7 +127,7 @@ Sau khi quá trình cài đặt hoàn tất. Ta gõ tiếp lệnh sau để kh�
 Cài đặt Yarn
 ------
 
-Để sử dụng đa dạng các thư viện mà không tốn sức ở phần tải và cấu hình vào dự án, hãy sử dụng công cụ quản lí các phụ thuộc vào trong dự án một cách có cấu trúc và tiện lợi. 
+Để sử dụng đa dạng các thư viện mà không tốn nhiều công sức ở các giai đoạn cấu hình tích hợp vào dự án, ta sử dụng công cụ quản lí các phụ thuộc đó là Yarn. 
 
 Hãy cài đặt Yarn thông qua brew. Gõ lệnh sau vào terminal:
 
