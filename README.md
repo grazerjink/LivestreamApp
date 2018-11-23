@@ -116,7 +116,7 @@ Sau khi tải thành công, tiến hành giải nén ra ta sẽ có được th�
 Cài đặt PostgreSQL
 ------
 
-Ứng dụng sử dụng NoSQL database để lưu trữ dữ liệu cụ thể là dùng PostgreSQL. Vì thế hãy cài đặt ứng dụng này vào máy tính của bạn thông qua trình cài đặt Homebrew. Hãy gõ lệnh sau vào terminal của máy tính và quá trình cài đặt sẽ được tiến hành tự động:
+Ứng dụng sử dụng NoSQL database để lưu trữ dữ liệu, cụ thể là dùng PostgreSQL. Ta hãy cài ứng dụng này vào máy tính thông qua Homebrew. Hãy gõ lệnh sau để cài đặt tự động:
 
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
