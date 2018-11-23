@@ -1,10 +1,19 @@
 # LivestreamApp
 Hướng dẫn sử dụng ứng dụng livestream dạy học trên MacOS.
 
+Cài đặt Homebrew cho MacOS
+------
+
+Trước hết hãy kiểm tra máy đã được cài đặt Homebrew chưa, nếu chưa hãy tiến hành cài đặt nó. Đầu tiên ta hãy mở Terminal của máy và copy paste lệnh dưới vào terminal rồi nhấn Enter:\
+
+`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
+Quá trình sẽ tự động tiến hành cài đặt kéo dài khoảng vài phút.
+
 Cài đặt server NGINX với RTMP module
 ------
 
-Mở terminal và gõ 2 lệnh sau:\
+Sau khi đã cài đặt thành công Homebrew, ta mở một tab mới trong terminal và gõ vào 2 lệnh sau:\
 
 `brew tap denji/nginx`\
 `brew install nginx full --with-rtmp-module --with-debug`
@@ -107,13 +116,75 @@ Sau khi tải thành công, tiến hành giải nén ra ta sẽ có được th�
 Cài đặt PostgreSQL
 ------
 
+Ứng dụng sử dụng NoSQL database để lưu trữ dữ liệu cụ thể là dùng PostgreSQL. Vì thế hãy cài đặt ứng dụng này vào máy tính của bạn thông qua trình cài đặt Homebrew. Hãy gõ lệnh sau vào terminal của máy tính và quá trình cài đặt sẽ được tiến hành tự động:\
 
+`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
-4. Cài đặt npm và yarn (mới nhất)
-5. Cài đặt ruby-gems (mới nhất)
-6. Cài đặt ruby(2.3.1) và rails framework (5.0)
-7. Cấu hình và khởi chạy ứng dụng
-- Chạy lệnh bundle: để cài đặt tất cả các gem đã yêu cầu.
-- Chạy lệnh db:migrate: để map db schema mới nhất.
-- Chạy lệnh yarn install: để cài đặt tất cả các pkg npm.
-- Chạy lệnh rails s: khởi chạy ứng dụng.
+Sau khi quá trình cài đặt hoàn tất. Ta gõ tiếp lệnh sau để khởi chạy service của PostgreSQL:\
+
+`brew services start postgresql`
+
+Cài đặt Yarn
+------
+
+Để sử dụng đa dạng các thư viện mà không tốn sức ở phần tải và cấu hình vào dự án, hãy sử dụng công cụ quản lí các phụ thuộc vào trong dự án một cách có cấu trúc và tiện lợi. 
+
+Hãy cài đặt Yarn thông qua brew. Gõ lệnh sau vào terminal:
+
+`brew install yarn`
+
+Quá trình này sẽ giúp ta cài đặt Nodejs cũng như công cụ NPM và cả Yarn nữa, gõ lệnh sau vào terminal để kiểm tra sự tồn tại:\
+`npm --version`
+`yarn --version`
+
+Cài đặt Ruby Version Management
+------
+
+Trước hết, ta phải cài đặt phần mềm chứng thực các mã chứng thực và tài liệu mã nguồn bằng GPGTools: [Tải tại đây](https://gpgtools.org/).
+
+Tải và cài đặt nó vào máy tính của bạn. Khi GPGTools cài đặt thành công, tiếp theo chúng ta bật terminal lên và gõ vào 2 lệnh sau để tiến hành cài đặt RVM:\
+`gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB`\
+`\curl -sSL https://get.rvm.io | bash -s stable`
+
+Quá trình cài đặt RVM thành công, hệ thống máy tính bạn sẽ có 2 công cụ sau:
+* Ruby - Ngôn ngữ lập trình Ruby.
+* Gems - Gói quản lí các thư viện dùng trong lập trình Ruby.
+
+Gõ lệnh sau vào terminal để kiểm tra sự tồn tại:\
+`ruby --version`
+`gem --version`
+
+Cài đặt Rails Framework (v5.0)
+------
+
+Sau khi ta có được công cụ gem thông qua cài đặt RVM ở bước trên, ta tiếp tục gõ lệnh sau để cài đặt Rails Framework:\
+`gem install rails`
+
+Gõ lệnh sau vào terminal để kiểm tra sự tồn tại:\
+`rails --version`
+
+Cấu hình và khởi chạy ứng dụng livestream
+------
+
+Trước hết ta clone mã nguồn dự án hoặc tải tại [đường dẫn này](google.com). Sau khi clone hoặc tải thành công, ta bật terminal và di chuyện vào bên trong thư mục của dự án. 
+
+Chạy lệnh **bundle** để hệ thống hỗ trợ tải các thư viện cần thiết và build source giúp chúng ta.\
+`bundle`
+
+Tiếp theo, chạy tiếp lệnh **db:migrate** để tạo cơ sở dữ liệu trong PostgreSQL với các thông tin như localhost, username, password đều để mặc định.\
+`rails db:migrate`
+
+Sau đó, ta phải tải thư viện cho Reactjs bằng Yarn. Gõ lệnh:\
+`yarn install`
+
+Hệ thống sẽ tiến hành tải và build source cho ta. Sau quá trình đó thì mọi chuyện coi như là hết, giờ ta chỉ việc chạy và demo ứng dụng Livestream này theo lệnh sau:\
+`rails s`
+
+Thông tin liên hệ
+------
+
+Mọi thắc mắc hay gặp vấn đề gì trong quá trình cấu hình cài đặt xin vui lòng gửi email qua:\
+`khaiquan9926@gmail.com`
+hoặc có thể khởi tạo issue trong git project này.
+
+Xin cảm ơn mọi người quan tâm theo dõi.
