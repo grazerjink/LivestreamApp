@@ -172,7 +172,11 @@ Gõ lệnh sau vào terminal để kiểm tra sự tồn tại:
 Cấu hình và khởi chạy ứng dụng livestream
 ------
 
-Source code dự án cũng đã được ghi vào chung CD, ta bật terminal và di chuyện vào bên trong thư mục của dự án. Chạy lệnh **bundle** để hệ thống hỗ trợ tải các thư viện cần thiết và build source giúp chúng ta.
+Source code dự án cũng đã được ghi vào chung CD, ta bật terminal và di chuyện vào bên trong thư mục của dự án.
+
+`cd /path/to/LivestreamApp`
+
+Chạy lệnh **bundle** để hệ thống hỗ trợ tải các thư viện cần thiết và build source giúp chúng ta.
 
 `bundle`
 
