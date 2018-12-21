@@ -172,7 +172,7 @@ Gõ lệnh sau vào terminal để kiểm tra sự tồn tại:
 Cấu hình và khởi chạy ứng dụng livestream
 ------
 
-Source code dự án cũng đã được ghi vào chung CD, ta bật terminal và di chuyện vào bên trong thư mục của dự án.
+Source code dự án cũng đã được nén và ghi vào chung CD, ta tiến hành giải nén và sau đó bật terminal cd vào bên trong thư mục của dự án.
 
 `cd /path/to/LivestreamApp`
 
